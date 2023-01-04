@@ -1,0 +1,34 @@
+.add-vechicle-container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.add-vechicle-container > div {
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-container {
+    padding: 12px;
+}
+
+.vechicle-section-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.type-attribute, .model-attribute {
+    padding-right: 24px;
+}
+
+.type-attribute > span, .model-attribute > span {
+    padding-right:16px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+}

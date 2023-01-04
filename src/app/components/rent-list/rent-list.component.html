@@ -1,0 +1,22 @@
+<div class="list-container">
+    <div class="rent-list">
+        <div class="list-header">
+            <span class="property-header property__id">ID</span>
+            <span class="property-header property__first-name">First Name</span>
+            <span class="property-header property__last-name">Last Name</span>
+            <span class="property-header property__vechicle">Vechicle</span>
+            <span class="property-header property__mark">Mark</span>
+            <span class="property-header property__reg-id">Reg. ID</span>
+            <span class="property-header property__rent-date">Rent started</span>
+            <span class="property-header property__return-date">Rent expires</span>
+        </div>
+        <div class="list-content" *ngFor="let rent of rentList">
+            <app-rent-details
+                [rentDetails]="rent"
+            ></app-rent-details>
+        </div>
+    </div>
+    <button class="add-transaction-button"
+        (click)="addTransactionRedirect()"
+    >Dodaj transakcje</button>
+</div>

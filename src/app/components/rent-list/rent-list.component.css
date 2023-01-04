@@ -1,0 +1,53 @@
+.list-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    width: 100%;
+}
+
+.add-transaction-button {
+    width: 90px;
+    height: 40px;
+}
+
+.rent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 80%;
+    padding-top: 64px;
+    overflow-y: hidden;
+    height: 60vh;
+}
+
+.property__id {
+    width: 3%;
+}
+
+.property__first-name {
+    width: 9%;
+}
+
+.property__last-name {
+    width: 9%;
+}
+.property__vechicle {
+    width: 8%;
+}
+.property__mark {
+    width: 8%;
+}
+.property__reg-id {
+    width: 8%;
+}
+.property__rent-date {
+    width: 15%;
+}
+.property__return-date {
+    width: 15%;
+}
+
+.list-header, .rent-details {
+    display: flex;
+    justify-content: space-between;
+}

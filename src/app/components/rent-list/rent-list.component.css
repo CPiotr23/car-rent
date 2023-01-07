@@ -1,7 +1,6 @@
 .list-container {
     display: flex;
     justify-content: space-around;
-    padding: 16px;
     width: 100%;
 }
 
@@ -47,7 +46,25 @@
     width: 15%;
 }
 
+.details-status {
+    width: 5%;
+}
+
+.details-status__value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .list-header, .rent-details {
     display: flex;
     justify-content: space-between;
 }
+
+.dot {
+    height: 16px;
+    width: 16px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }

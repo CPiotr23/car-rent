@@ -2,3 +2,15 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.dot.positive_status {
+    background-color: green;
+}
+
+.dot.warn_status {
+    background-color: yellow;
+}
+
+.dot.ended_status {
+    background-color: red;
+}

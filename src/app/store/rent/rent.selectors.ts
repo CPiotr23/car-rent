@@ -7,3 +7,8 @@ export const selectRentList = createSelector(
     selectRentState,
     (state: RentState) => state.rentList
 );
+
+export const selectRentSavingStatus = createSelector(
+    selectRentState,
+    (state: RentState) => state.rentSavingStatus
+);

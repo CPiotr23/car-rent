@@ -1,37 +1,21 @@
 <div class="add-vechicle-container">
-    <div class="vechicle-section">
-        <span>Sekcja Pojazd</span>
-        <div class="vechicle-section-container section-container">
-            <div class="type-attribute">
-                <span>Rodzaj pojazdu</span>
-                <select [formControl]="$any(addRentForm).controls['vechicleType']">
-                    <option *ngFor="let vechicle of vechicleTypes" [ngValue]="vechicle.id">
-                        {{ vechicle.type }}
-                    </option>
-                </select>
-            </div>
-            <div class="model-attribute">
-                <span>Model</span>
-                <select [formControl]="$any(addRentForm).controls['vechicleModel']">
-                    <option *ngFor="let vechicle of vechicleTypes" [ngValue]="vechicle.id">
-                        {{ vechicle.type }}
-                    </option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div class="details-section">
-        <span>Sekcja dane szczegółowe pojazdu</span>
-    </div>
-    <div class="date-section">
-        <span>Sekcja daty</span>
-    </div>
+    <app-add-rent-section-vechicle *ngIf="vechicles"
+        [vechicles]="vechicles" 
+        [vechicleTypes]="vechicleTypes" 
+        [addRentForm]="addRentForm"
+    ></app-add-rent-section-vechicle>
+    <app-add-rent-section-details 
+        [selectedVechicleForm]="selectedVechicleForm"
+    ></app-add-rent-section-details>
+    <app-add-rent-section-date 
+        [selectedVechicleForm]="selectedVechicleForm"
+    ></app-add-rent-section-date>
     <div class="price-section">
         <span>Sekcja wyceny</span>
-        <span>{{ "Szacowana wycena: " + getSummaryCost() }}</span>
+        <span>{{ "Szacowana wycena: " + getSummaryCost() + " PLN"}}</span>
     </div>
 </div>
 <div class="buttons-container">
     <button (click)="redirectToList()">Anuluj</button>
-    <button (click)="redirectToNextStep()">Dalej</button>
+    <button [disabled]="!selectedVechicleForm.valid" (click)="redirectToNextStep()">Dalej</button>
 </div>

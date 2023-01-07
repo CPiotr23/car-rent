@@ -1,0 +1,31 @@
+<div class="date-section">
+    <span>Sekcja daty</span>
+    <div class="date-section-container">
+        <form [formGroup]="selectedVechicleForm">
+            <div class="input-container">
+                <span>Start Rent Date</span>
+                <input formControlName="startRentDate" type="date">
+                <div class="validation-error" *ngIf="selectedVechicleForm.get('startRentDate').errors?.['startDateLowerThanCurrent']">
+                    {{ 'Data rozpoczęcia wypożyczenia nie może być mniejsza od aktualnej daty' }}
+                </div>
+            </div>
+            <div class="input-container">
+                <span>Rent duration (days)</span>
+                <input formControlName="rentDurationDays" type="number">
+                <div class="validation-error" *ngIf="selectedVechicleForm.get('rentDurationDays').errors?.['incorrectDuration']">
+                    {{ 'Niepoprawana ilość dni wypożyczenia' }}
+                </div>
+            </div>
+            <div class="input-container">
+                <span>Rent End Date</span>
+                <input formControlName="endRentDate" type="date">
+                <div class="validation-error" *ngIf="selectedVechicleForm.get('endRentDate').errors?.['endDateLowerThanCurrent']">
+                    {{ 'Data zakończenia wypożyczenia nie może być mniejsza od aktualnej daty' }}
+                </div>
+                <div class="validation-error" *ngIf="selectedVechicleForm.errors?.['endGreaterThanStart']">
+                    {{ 'Data zakończenia nie może być mniejsza od daty rozpoczęcia' }}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

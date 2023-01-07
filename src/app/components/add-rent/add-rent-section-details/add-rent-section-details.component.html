@@ -1,0 +1,21 @@
+<span>Sekcja dane szczegółowe pojazdu</span>
+        <div class="details-section-container">
+            <form [formGroup]="selectedVechicleForm">
+                <div class="input-container">
+                    <span>Marka</span>
+                    <input formControlName="vechicleMark">
+                </div>
+                <div class="input-container">
+                    <span>Model</span>
+                    <input formControlName="vechicleModel">
+                </div>
+                <div class="input-container">
+                    <span>Rejestracja</span>
+                    <input formControlName="registrationId">
+                </div>
+                <div class="input-container">
+                    <span>Silnik</span>
+                    <input formControlName="engineType">
+                </div>
+            </form>
+        </div>

@@ -1,0 +1,20 @@
+
+<span>Sekcja Pojazd</span>
+    <div class="vechicle-section-container">
+        <div class="select-container">
+            <span>Rodzaj pojazdu</span>
+            <select [formControl]="$any(addRentForm).controls['vechicleType']">
+                <option *ngFor="let vechicle of vechicleTypes" [ngValue]="vechicle.valueCde">
+                    {{ vechicle.valueName }}
+                </option>
+            </select>
+        </div>
+        <div class="select-container">
+            <span>Model</span>
+            <select [formControl]="$any(addRentForm).controls['vechicleModel']">
+                <option *ngFor="let vechicle of filteredVechicles$ | async" [ngValue]="vechicle.id">
+                    {{ vechicle.vechicleMark + " " + vechicle.vechicleModel }}
+                </option>
+            </select>
+        </div>
+    </div>

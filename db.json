@@ -1,0 +1,21 @@
+{
+  "rent-list": [],
+  "vechicle-type": [
+    {
+      "id": 1,
+      "valueCde": "SO",
+      "valueName": "Samochód osobowy"
+    },
+    {
+      "id": 2,
+      "valueCde": "M",
+      "valueName": "Motor"
+    },
+    {
+      "id": 3,
+      "valueCde": "B",
+      "valueName": "Bus"
+    }
+  ],
+  "vechicles": []
+}

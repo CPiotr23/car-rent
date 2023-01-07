@@ -7,4 +7,7 @@
     <span class="property-value property__reg-id">{{ rentDetails.registrationNumber || '-'}}</span>
     <span class="property-value property__rent-date">{{ rentDetails.rentDate || '-'}}</span>
     <span class="property-value property__return-date">{{ rentDetails.returnDate || '-'}}</span>
+    <div class="details-status details-status__value">
+        <span class="dot" [ngClass]=getStatusClass(rentDetails.returnDate)></span>
+    </div>
 </div>

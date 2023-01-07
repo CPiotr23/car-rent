@@ -1,0 +1,16 @@
+.vechicle-section-container {
+    padding: 16px;
+    display: flex;
+}
+
+.select-container > span {
+    padding-right: 8px;
+}
+
+.select-container {
+    padding-right: 32px;
+}
+
+select {
+    min-width: 120px;
+}

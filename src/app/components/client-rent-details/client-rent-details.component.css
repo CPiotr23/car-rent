@@ -1,17 +1,12 @@
-.add-vechicle-container {
+.input-container {
     padding: 16px;
 }
 
-.price-section > span {
+.input-container > span {
     padding-right: 8px;
 }
 
-.price-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.price-section > span:nth-child(2) {
+.client-details-container {
     padding: 16px;
 }
 
@@ -19,9 +14,14 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 32px;
 }
 
 .buttons-container > button {
     height: 35px;
-    width: 60px;
+    width: 80px;
+}
+
+.input-error {
+    color: red;
 }

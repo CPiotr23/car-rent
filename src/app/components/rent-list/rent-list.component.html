@@ -9,6 +9,7 @@
             <span class="property-header property__reg-id">Reg. ID</span>
             <span class="property-header property__rent-date">Rent started</span>
             <span class="property-header property__return-date">Rent expires</span>
+            <span class="details-status">Status</span>
         </div>
         <div class="list-content" *ngFor="let rent of rentList">
             <app-rent-details
@@ -17,6 +18,7 @@
         </div>
     </div>
     <button class="add-transaction-button"
+        [disabled]="addButtonDisabled$ | async"
         (click)="addTransactionRedirect()"
     >Dodaj transakcje</button>
 </div>

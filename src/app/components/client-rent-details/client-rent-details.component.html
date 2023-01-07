@@ -1,0 +1,43 @@
+<div class="client-details-container">
+    <span>Sekcja klient</span>
+    <div class="form-container">
+        <form [formGroup]="clientForm">
+            <div class="input-container">
+                <span>Imie</span>
+                <input formControlName="firstName" type="text">
+                <div class="input-error" *ngIf="clientForm.get('firstName')?.errors?.['required'] && clientForm.get('firstName').touched">
+                    {{ 'To pole jest wymagane' }}
+                </div>
+            </div>
+            <div class="input-container">
+                <span>Nazwisko</span>
+                <input formControlName="lastName" type="text">
+                <div class="input-error" *ngIf="clientForm.get('lastName')?.errors?.['required'] && clientForm.get('lastName').touched">
+                    {{ 'To pole jest wymagane' }}
+                </div>
+            </div>
+            <div class="input-container">
+                <span>Telefon</span>
+                <input formControlName="phoneNumber" maxlength="9" type="text" (blur)="showPhoneInputErrors()">
+                <div class="input-error" *ngIf="clientForm.get('phoneNumber').errors?.['invalidFormat'] && phoneInputErrorsVisibility">
+                    {{ 'Niepoprawny numer telefonu' }}
+                </div>
+                <div class="input-error" *ngIf="clientForm.get('phoneNumber')?.errors?.['required'] && clientForm.get('phoneNumber').touched">
+                    {{ 'To pole jest wymagane' }}
+                </div>
+            </div>
+            <div class="input-container">
+                <span>Email</span>
+                <input formControlName="email" type="text" (blur)="showEmailInputErrors()">
+                <div class="input-error" *ngIf="clientForm.get('email').errors?.['invalidFormat'] && emailInputErrorsVisibility">
+                    {{ 'Niepoprawny adres email' }}
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="buttons-container">
+        <button (click)="cancelProcess()">Anuluj</button>
+        <button (click)="redirectToPreviousView()">Wstecz</button>
+        <button [disabled]="!clientForm.valid" (click)="confirm()">Zatwierdź</button>
+    </div>
+</div>

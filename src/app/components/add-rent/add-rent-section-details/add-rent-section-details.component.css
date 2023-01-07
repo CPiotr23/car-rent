@@ -1,0 +1,11 @@
+.details-section-container {
+    padding: 16px;
+}
+
+.input-container > span {
+    padding-right: 8px;
+}
+
+.input-container {
+    padding: 12px 0;
+}
